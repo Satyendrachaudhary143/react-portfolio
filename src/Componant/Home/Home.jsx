@@ -1,5 +1,5 @@
 import React from 'react'
-import "home.css"
+import "./home.css"
 import man from "../../assets/file/code.png";
 import TypingEffect from "react-typing-effect";
 import { MdOutlineWhatsapp } from 'react-icons/md';
