@@ -5,75 +5,12 @@ import mern from "../../assets/file/mern.png";
 import dsa from "../../assets/file/dsa.png";
 import java from "../../assets/file/java.png";
 import app from "../../assets/file/app.png"
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+
 
 
 function About() {
-    gsap.registerPlugin(ScrollTrigger);
-    useGSAP(() => {
-        gsap.from(".circle", {
-            x: -100,
-            duration: 1,
-            opacity: 0,
 
-            scrollTrigger: {
-                trigger: ".circle",
-                scroll: "body",
-                scrub: 2,
 
-                start: "top 60%",
-                end: "top 30%",
-            }
-
-        })
-        gsap.from(".line", {
-            x: -100,
-            duration: 1,
-            opacity: 0,
-
-            scrollTrigger: {
-                trigger: ".line",
-                scroll: "body",
-                scrub: 2,
-
-                start: "top 60%",
-                end: "top 30%",
-            }
-
-        })
-        gsap.from(".personalefo ul", {
-            y: 100,
-            duration: 1,
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".personalefo ul",
-                scroll: "body",
-                scrub: 2,
-
-                start: "top 60%",
-                end: "top 30%",
-            }
-
-        })
-        // gsap.from(".right", {
-        //     x: 500,
-        //     duration: 1,
-        //     opacity: 0,
-
-        //     scrollTrigger: {
-        //         trigger: ".right Cart",
-        //         scroll: "body",
-        //         scrub: 2,
-        //         markers: true,
-        //         start: "top 100%",
-        //         end: "top 20%",
-        //     }
-
-        // })
-
-    })
     return (
         <div id='about'>
             <div className="left">
