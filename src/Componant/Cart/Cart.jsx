@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Cart.css"
+import "../Css/Cart.css"
 function Cart({ title, img }) {
     return (
         <div className='cart'>

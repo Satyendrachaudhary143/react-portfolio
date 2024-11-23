@@ -1,12 +1,79 @@
 import React from 'react'
-import "./About.css"
+import "../Css/About.css";
 import Cart from '../Cart/Cart'
 import mern from "../../assets/file/mern.png";
 import dsa from "../../assets/file/dsa.png";
 import java from "../../assets/file/java.png";
 import app from "../../assets/file/app.png"
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
 
 function About() {
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.from(".circle", {
+            x: -100,
+            duration: 1,
+            opacity: 0,
+
+            scrollTrigger: {
+                trigger: ".circle",
+                scroll: "body",
+                scrub: 2,
+
+                start: "top 60%",
+                end: "top 30%",
+            }
+
+        })
+        gsap.from(".line", {
+            x: -100,
+            duration: 1,
+            opacity: 0,
+
+            scrollTrigger: {
+                trigger: ".line",
+                scroll: "body",
+                scrub: 2,
+
+                start: "top 60%",
+                end: "top 30%",
+            }
+
+        })
+        gsap.from(".personalefo ul", {
+            y: 100,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".personalefo ul",
+                scroll: "body",
+                scrub: 2,
+
+                start: "top 60%",
+                end: "top 30%",
+            }
+
+        })
+        // gsap.from(".right", {
+        //     x: 500,
+        //     duration: 1,
+        //     opacity: 0,
+
+        //     scrollTrigger: {
+        //         trigger: ".right Cart",
+        //         scroll: "body",
+        //         scrub: 2,
+        //         markers: true,
+        //         start: "top 100%",
+        //         end: "top 20%",
+        //     }
+
+        // })
+
+    })
     return (
         <div id='about'>
             <div className="left">
@@ -51,11 +118,11 @@ function About() {
                 </div>
             </div>
             <div className="right" >
-                <Cart title={"MERN WEB DEVELOPMENT"} img={mern} />
-                <Cart title={"DSA"} img={dsa} />
+                <Cart title={"MERN WEB DEVELOPMENT"} img={mern} className="ct" />
+                <Cart title={"DSA"} img={dsa} className="ct" />
 
-                <Cart title={"JAVA"} img={java} />
-                <Cart title={"APP DEVELOPER"} img={app} />
+                <Cart title={"JAVA"} img={java} className="ct" />
+                <Cart title={"APP DEVELOPER"} img={app} className="ct" />
 
             </div>
         </div>
