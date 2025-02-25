@@ -1,52 +1,31 @@
-import React from 'react'
-import "../Css/m.css"
-import man from "../../assets/file/code.png";
-import TypingEffect from "react-typing-effect";
-import { MdOutlineWhatsapp } from 'react-icons/md';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import "../../Css/style.css"
 
 function Home() {
 
 
 
     return (
-        <div id='home'>
-            <div className="lefthome">
-                <div className="details">
-                    <div className="line1">I'M</div>
-                    <div className="line2">SATYENDRA CHAUDHARY</div>
-                    <div className="line3">
-                        <TypingEffect text={["WEB DEVELOPER", "SOFTWARE DEVELOPER", "APP DEVELOPER"]}
-                            speed={200}
-                            eraseSpeed={50}
-                            eraseDelay={200}
-                            cursor={"_"}
-                        />
-                    </div>
-                    <div className="social-links mt-3">
-                        <div className={"icon hover:cursor-pointer"} >
-                            <a href="https://wa.me/+918840859444" target='blank'> <MdOutlineWhatsapp /></a>
-                        </div>
-                        {/* <div className={"icon hover:cursor-pointer"} >
-                            <a href="https://wa.me/8840859444"> <FaLinkedin /></a>
-                        </div> */}
-                        <div className={"icon hover:cursor-pointer"} >
-                            <a href="https://www.instagram.com/satyendrachaudhary143?igsh=YzljYTk1ODg3Zg==" target='blank'> <FaInstagram /></a>
-                        </div>
-                        <div className={"icon hover:cursor-pointer"} >
-                            <a href="https://github.com/Satyendrachaudhary143" target='blank'> <FaGithub /></a>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
+        // <!-- Hero Section -->
+      <section className="hero-section" id="home">
+         <div className="hero-content">
+            {/* <!-- Name --> */}
+            <h1 className="hero-title">Satyendra Chaudhary</h1>
+            {/* <!-- Description --> */}
+            <p className="hero-description">Creative Web Developer | Full Stack developer</p>
+            {/* <!-- Call-to-Action Buttons --> */}
+            <div className="hero-buttons">
+               <a href="#contact" className="btn btn-primary">Hire Me</a>
+               <a href="#portfolio" className="btn btn-secondary">View Portfolio</a>
             </div>
-            <div className="righthome">
-                <img src={man} alt="image" />
+            {/* <!-- Social Media Icons --> */}
+            <div className="social-icons">
+               <a href="https://www.linkedin.com/in/satyendra-chaudhary-b958632b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className="social-icon"><i className="fab fa-linkedin"></i></a>
+               <a href="https://github.com/satyendrachaudhary143" target="_blank" className="social-icon"><i className="fab fa-github"></i></a>
+               <a href="https://x.com/ssboss183032734" target="_blank" className="social-icon"><i className="fab fa-twitter"></i></a>
             </div>
-        </div>
+         </div>
+      </section>
+    //   <!-- About Me Section -->
     )
 }
 

@@ -10,8 +10,8 @@ function Project() {
 
 
     return (
-        <div className='project' id='project'>
-            <h1 className='he'>2+ YEARS EXPERIENCE IN PROJECTS</h1>
+        <div className='project' id='projects'>
+            <h1 className='section-title'>PROJECTS</h1>
             <div className="slider">
                 <Cart title={"FOOD APP"} img={food} />
                 <Cart title={"VIRTUAL ASSISTANT"} img={va} />
