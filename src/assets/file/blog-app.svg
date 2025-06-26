@@ -1,0 +1,14 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <rect x="60" y="60" width="280" height="180" rx="8" fill="#333"/>
+  <rect x="80" y="80" width="240" height="30" rx="4" fill="#e94560"/>
+  <text x="200" y="100" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">Blog Title</text>
+  <rect x="80" y="120" width="200" height="8" fill="#666"/>
+  <rect x="80" y="135" width="180" height="8" fill="#666"/>
+  <rect x="80" y="150" width="220" height="8" fill="#666"/>
+  <rect x="80" y="165" width="160" height="8" fill="#666"/>
+  <rect x="80" y="180" width="190" height="8" fill="#666"/>
+  <rect x="80" y="195" width="140" height="8" fill="#666"/>
+  <rect x="80" y="210" width="170" height="8" fill="#666"/>
+  <text x="200" y="250" text-anchor="middle" fill="#e94560" font-family="Arial" font-size="14" font-weight="bold">Blog App</text>
+</svg> 

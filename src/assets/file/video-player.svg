@@ -1,0 +1,8 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <rect x="50" y="80" width="300" height="180" rx="8" fill="#333"/>
+  <circle cx="200" cy="170" r="30" fill="#e94560"/>
+  <polygon points="190,160 190,180 210,170" fill="white"/>
+  <rect x="50" y="270" width="300" height="20" rx="4" fill="#e94560"/>
+  <text x="200" y="285" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Custom Video Player</text>
+</svg> 

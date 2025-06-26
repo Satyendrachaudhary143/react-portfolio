@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Smooth scrolling for all anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure proper scrolling on all browsers */
+* {
+    scroll-behavior: smooth;
+}

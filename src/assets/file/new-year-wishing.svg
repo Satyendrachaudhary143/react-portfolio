@@ -1,0 +1,11 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  <circle cx="200" cy="100" r="40" fill="#e94560"/>
+  <text x="200" y="110" text-anchor="middle" fill="white" font-family="Arial" font-size="24" font-weight="bold">2025</text>
+  <text x="200" y="140" text-anchor="middle" fill="#e94560" font-family="Arial" font-size="16" font-weight="bold">HAPPY NEW YEAR</text>
+  <rect x="80" y="160" width="240" height="80" rx="8" fill="#333" stroke="#e94560" stroke-width="2"/>
+  <text x="200" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="14">🎉</text>
+  <text x="200" y="205" text-anchor="middle" fill="white" font-family="Arial" font-size="14">🎊</text>
+  <text x="200" y="225" text-anchor="middle" fill="white" font-family="Arial" font-size="14">✨</text>
+  <text x="200" y="250" text-anchor="middle" fill="#e94560" font-family="Arial" font-size="12" font-weight="bold">New Year Wishing</text>
+</svg> 
