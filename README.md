@@ -48,9 +48,7 @@ portfolio/
   └── ...
 ```
 
-## 📸 Screenshots
 
-> Add your portfolio screenshots here for better presentation!
 
 ## 🌐 Live Demo
 
