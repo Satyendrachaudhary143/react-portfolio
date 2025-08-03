@@ -48,7 +48,7 @@ function Home() {
                             href="#contact" 
                             className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
                         >
-                            Hire Me
+                            Contact me
                         </a>
                         <a 
                             href="#portfolio" 

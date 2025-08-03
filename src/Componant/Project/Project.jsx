@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Cart from "../Cart/Cart";
 import "../Css/project.css";
@@ -11,6 +11,8 @@ import schoolManagement from "../../assets/file/school-management.svg";
 import foodApp from "../../assets/file/food-app.svg";
 
 function Project() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const projectsPerPage = 2;
     const projects = [
         {
             title: "URL Shortener",
@@ -73,6 +75,12 @@ function Project() {
         }
     };
 
+    // Calculate pagination
+    const totalPages = Math.ceil(projects.length / projectsPerPage);
+    const startIndex = (currentPage - 1) * projectsPerPage;
+    const endIndex = startIndex + projectsPerPage;
+    const currentProjects = projects.slice(startIndex, endIndex);
+
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: {
@@ -82,6 +90,18 @@ function Project() {
                 duration: 0.5
             }
         }
+    };
+
+    const handlePageChange = (page) => {
+        console.log('Changing to page:', page); // Debug log
+        setCurrentPage(page);
+        // Scroll to top of projects section
+        setTimeout(() => {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
     };
 
     return (
@@ -100,19 +120,11 @@ function Project() {
                     </p>
                 </motion.div>
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
-                >
-                    {projects.map((project, index) => (
-                        <motion.div
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+                    {currentProjects.map((project, index) => (
+                        <div
                             key={index}
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.02 }}
-                            className="bg-[#1a1a2e] rounded-xl overflow-hidden border border-gray-800 hover:border-[#e94560] transition-all duration-300"
+                            className="bg-[#1a1a2e] rounded-xl overflow-hidden border border-gray-800 hover:border-[#e94560] transition-all duration-300 hover:scale-105"
                         >
                             <Cart
                                 title={project.title}
@@ -121,9 +133,64 @@ function Project() {
                                 github={project.github}
                                 technologies={project.technologies}
                             />
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                    <div className="flex justify-center items-center gap-1 sm:gap-2 mt-12 relative z-10">
+                        {/* Previous Button */}
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className={`px-2 py-2 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm min-w-[60px] ${
+                                currentPage === 1
+                                    ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                                    : 'bg-[#e94560] text-white hover:bg-[#d13d56] hover:scale-105'
+                            }`}
+                        >
+                            ← Prev
+                        </button>
+
+                        {/* Page Numbers */}
+                        <div className="flex gap-1">
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                <button
+                                    key={page}
+                                    onClick={() => handlePageChange(page)}
+                                    className={`px-2 py-2 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm min-w-[32px] ${
+                                        currentPage === page
+                                            ? 'bg-[#e94560] text-white'
+                                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105'
+                                    }`}
+                                >
+                                    {page}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Next Button */}
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className={`px-2 py-2 rounded-lg font-semibold transition-all duration-300 text-xs sm:text-sm min-w-[60px] ${
+                                currentPage === totalPages
+                                    ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                                    : 'bg-[#e94560] text-white hover:bg-[#d13d56] hover:scale-105'
+                            }`}
+                        >
+                            Next →
+                        </button>
+                    </div>
+                )}
+
+                {/* Page Info */}
+                <div className="text-center mt-4 sm:mt-6 relative z-10">
+                    <p className="text-gray-400 text-xs sm:text-sm">
+                        Showing {startIndex + 1}-{Math.min(endIndex, projects.length)} of {projects.length} projects
+                    </p>
+                </div>
             </div>
         </section>
     );
