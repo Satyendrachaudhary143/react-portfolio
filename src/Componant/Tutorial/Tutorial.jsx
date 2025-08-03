@@ -61,11 +61,11 @@ function Tutorial() {
     const currentTutorials = tutorials.slice(startIndex, endIndex);
     
     // Debug logging
-    console.log('Current Page:', currentPage);
-    console.log('Total Pages:', totalPages);
-    console.log('Start Index:', startIndex);
-    console.log('End Index:', endIndex);
-    console.log('Current Tutorials:', currentTutorials.map(t => t.title));
+    // console.log('Current Page:', currentPage);
+    // console.log('Total Pages:', totalPages);
+    // console.log('Start Index:', startIndex);
+    // console.log('End Index:', endIndex);
+    // console.log('Current Tutorials:', currentTutorials.map(t => t.title));
 
     const handlePageChange = (page) => {
         console.log('Changing to page:', page); // Debug log
