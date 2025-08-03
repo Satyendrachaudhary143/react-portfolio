@@ -86,6 +86,7 @@ function Nav() {
         { href: "#about", text: "About" },
         { href: "#skills", text: "Skills" },
         { href: "#projects", text: "Projects" },
+        { href: "#tutorials", text: "Tutorials" },
         { href: "#contact", text: "Contact" }
     ];
 
