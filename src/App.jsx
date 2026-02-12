@@ -8,18 +8,20 @@ import Project from './Componant/Project/Project'
 import Tutorial from './Componant/Tutorial/Tutorial'
 import Skill from "./Componant/Skill/Skill"
 import Footer from "./Componant/Footer/Footer"
+import UnderMaintenance from "./Componant/UnderMaintenance"
 
 function App() {
   return (
     <>
-      <Nav />
+      <UnderMaintenance />
+      {/* <Nav />
        <Home />
       <About />
       <Skill />
       <Project />
       <Tutorial />
       <Contact />
-      <Footer/>
+      <Footer/> */}
     </>
   )
 }

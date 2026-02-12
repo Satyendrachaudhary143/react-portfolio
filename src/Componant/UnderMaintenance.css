@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Wrapper */
+.maintenance-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.maintenance-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Badge */
+.status-badge {
+  display: inline-block;
+  background: #f59e0b;
+  color: #000;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Heading */
+h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Description */
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 28px;
+}
+
+/* Contact Box */
+.contact-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-box h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.contact-box p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.contact-item {
+  margin: 8px 0;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.contact-item a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #facc15;
+}
+
+.footer-note {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* 📱 Mobile Devices (below 480px) */
+/* ============================= */
+@media (max-width: 480px) {
+  .maintenance-card {
+    padding: 28px 20px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .contact-box {
+    padding: 15px;
+  }
+
+  .contact-box h3 {
+    font-size: 15px;
+  }
+
+  .contact-item {
+    font-size: 13px;
+  }
+}
+
+/* ============================= */
+/* 📲 Tablet (481px - 768px) */
+/* ============================= */
+@media (min-width: 481px) and (max-width: 768px) {
+  .maintenance-card {
+    padding: 35px 25px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
