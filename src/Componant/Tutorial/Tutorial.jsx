@@ -14,7 +14,7 @@ function Tutorial() {
             title: "Programming with C",
             description: "A comprehensive C programming tutorial repository with detailed explanations, practice problems, and step-by-step solutions for beginners learning C programming language.",
             img: cProgramming,
-            github: "https://github.com/Satyendrachaudhary143/programing-with-c",
+            github: "https://github.com/Satyendrachaudhary143/programming-with-c",
             technologies: ["C", "Programming", "Tutorial", "Practice Problems"]
         },
         {
